@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RTO Exam</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="admob_app_id">ca-app-pub-9470815683151216~7892156368</string>
+    <string name="admob_banner_ad">ca-app-pub-9470815683151216/9013666343</string>
+</resources>
