@@ -1,5 +1,6 @@
 package `in`.pratikchakraborty.rtoexam
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -30,6 +31,12 @@ class MainActivity : AppCompatActivity() {
         MobileAds.initialize(this)
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
+
+        // MOCK TEST CLICK LISTENER
+        mock_test.setOnClickListener {
+            val intent = Intent(this, MockTestOnboarding::class.java)
+            startActivity(intent)
+        }
 
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
