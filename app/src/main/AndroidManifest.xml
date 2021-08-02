@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RTOExam">
-        <activity android:name=".QuizQuestionActivity"></activity>
+        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".QuizQuestionActivity" />
         <activity
             android:name=".MockTestOnboarding"
             android:screenOrientation="portrait" />
