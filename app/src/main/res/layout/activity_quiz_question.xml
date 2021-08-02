@@ -48,6 +48,7 @@
                 android:indeterminate="false"
                 android:layout_marginStart="10dp"
                 android:max="10"
+                android:progressTint="@color/dark_violet"
                 android:minHeight="50dp"
                 android:progress="0" />
 
@@ -115,7 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/btn_start_bg"
+            android:background="@drawable/btn_submit_bg"
             android:text="SUBMIT"
             android:textColor="@color/white"
             android:textSize="18sp"
