@@ -22,6 +22,7 @@ class MockTestOnboarding : AppCompatActivity() {
         window.statusBarColor = Color.TRANSPARENT
         btn_start.setOnClickListener {
             val intent = Intent(this, QuizQuestionActivity::class.java)
+            intent.putExtra(Constants.USER_NAME, et_name.text.toString())
             startActivity(intent)
             finish()
         }

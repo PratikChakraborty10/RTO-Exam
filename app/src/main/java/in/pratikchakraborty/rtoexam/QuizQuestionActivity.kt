@@ -19,9 +19,12 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
     private var mCurrentPosition: Int = 1
     private var mQuestionsList: ArrayList<Question> ? = null
     private var mSelectedOptionPosition: Int = 0
+    private var mCorrectAnswers: Int = 0
+    private var mUserName: String ?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_question)
+        mUserName = intent.getStringExtra(Constants.USER_NAME)
         // Color Change for Support Action Bar
         supportActionBar?.setBackgroundDrawable(ColorDrawable(getColor(R.color.dark_violet)))
         // Color Change for Status Bar
@@ -103,6 +106,8 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
                     // This is to check if the answer is wrong
                     if(question!!.correctAnswer != mSelectedOptionPosition) {
                         answerView(mSelectedOptionPosition, R.drawable.incorrect_option_border)
+                    } else {
+                        mCorrectAnswers++
                     }
                     // This is for correct answer
                     answerView(question.correctAnswer, R.drawable.correct_option_border)
