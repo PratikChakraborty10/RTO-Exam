@@ -97,12 +97,23 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
                         mCurrentPosition <= mQuestionsList!!.size -> {
                             setQuestion()
                         } else -> {
-                            val intent = Intent(this, ResultActivity::class.java)
-                            intent.putExtra(Constants.USER_NAME, mUserName)
-                            intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
-                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
-                            startActivity(intent)
-                            finish()
+                            if(mCorrectAnswers < 5) {
+                                val intent = Intent(this, ResultActivityTryAgain::class.java)
+                                intent.putExtra(Constants.USER_NAME, mUserName)
+                                intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
+                                intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
+                                startActivity(intent)
+                                finish()
+                                //startActivity(Intent(this, ResultActivityTryAgain::class.java))
+                            } else {
+                                val intent = Intent(this, ResultActivity::class.java)
+                                intent.putExtra(Constants.USER_NAME, mUserName)
+                                intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
+                                intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList!!.size)
+                                startActivity(intent)
+                                finish()
+                                //startActivity(Intent(this, ResultActivity::class.java))
+                            }
                             //Toast.makeText(this, "Congratulations!!! You have successfully completed the test", Toast.LENGTH_SHORT).show()
 
                         }
