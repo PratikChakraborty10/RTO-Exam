@@ -13,6 +13,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
+import com.google.android.material.snackbar.BaseTransientBottomBar
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_quiz_question.*
 
 class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
@@ -97,6 +99,7 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
                         mCurrentPosition <= mQuestionsList!!.size -> {
                             setQuestion()
                         } else -> {
+
                             if(mCorrectAnswers < 5) {
                                 val intent = Intent(this, ResultActivityTryAgain::class.java)
                                 intent.putExtra(Constants.USER_NAME, mUserName)
@@ -105,7 +108,7 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
                                 startActivity(intent)
                                 finish()
                                 //startActivity(Intent(this, ResultActivityTryAgain::class.java))
-                            } else {
+                            } else if(mCorrectAnswers in 5..10) {
                                 val intent = Intent(this, ResultActivity::class.java)
                                 intent.putExtra(Constants.USER_NAME, mUserName)
                                 intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
@@ -113,6 +116,8 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
                                 startActivity(intent)
                                 finish()
                                 //startActivity(Intent(this, ResultActivity::class.java))
+                            } else {
+                                Toast.makeText(this, "Something Went Wrong!!... Try Again!!", Toast.LENGTH_LONG).show()
                             }
                             //Toast.makeText(this, "Congratulations!!! You have successfully completed the test", Toast.LENGTH_SHORT).show()
 
