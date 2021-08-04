@@ -11,6 +11,7 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.BaseTransientBottomBar
@@ -117,7 +118,17 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
                                 finish()
                                 //startActivity(Intent(this, ResultActivity::class.java))
                             } else {
-                                Toast.makeText(this, "Something Went Wrong!!... Try Again!!", Toast.LENGTH_LONG).show()
+                                //Toast.makeText(this, "Something Went Wrong!!... Try Again!!", Toast.LENGTH_LONG).show()
+                                val mAlertDialog = AlertDialog.Builder(this)
+                                mAlertDialog.setTitle("SCORING ERROR!")
+                                mAlertDialog.setMessage("You seems to have tried to attempt an question more than once. You have to Start the the test once again.")
+                                mAlertDialog.setPositiveButton("START AGAIN") {
+                                    dialog, id -> //Toast.makeText(this, "YES BUTTON PRESSED", Toast.LENGTH_LONG).show()
+                                    startActivity(Intent(this, MockTestOnboarding::class.java))
+                                    finish()
+                                }
+                                mAlertDialog.show()
+
                             }
                             //Toast.makeText(this, "Congratulations!!! You have successfully completed the test", Toast.LENGTH_SHORT).show()
 
