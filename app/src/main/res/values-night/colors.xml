@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#f57733</color>
-    <color name="purple_700">#fc7019</color>
+    <color name="purple_500">#FF000000</color>
+    <color name="purple_700">#FF000000</color>
+    <color name="light_grey" tools:ignore="MissingDefaultResource">#3b3c3d</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#111212</color>
     <color name="main_text_color" tools:ignore="MissingDefaultResource">#fcfcfc</color>
-    <color name="settings_text_color">#000000</color>
+    <color name="settings_text_color">#ffffff</color>
 
     <color name="underLine">#BDBDBD</color>
     <color name="light_yellow">#ded662</color>
-    <color name="light_orange">#f08243</color>
-    <color name="dark_orange">#e8430c</color>
-    <color name="red">#c71b04</color>
+    <color name="light_orange">#626363</color>
+    <color name="dark_orange">#1b1c1c</color>
+    <color name="red">#ffffff</color>
     <color name="light_violet">#8b45ed</color>
-    <color name="dark_violet">#2a0163</color>
+    <color name="dark_violet">#1b1c1c</color>
     <color name="navy_blue">#05033d</color>
-    <color name="light_green">#61f288</color>
-    <color name="bright_green">#0ee819</color>
-    <color name="light_blue">#acdbfc</color>
+    <color name="light_green">#626363</color>
+    <color name="bright_green">#1b1c1c</color>
+    <color name="light_blue">#626363</color>
     <color name="sky_blue">#0272c2</color>
-    <color name="dark_green">#178016</color>
+    <color name="dark_green">#1b1c1c</color>
     <color name="low_green">#88e3a0</color>
-    <color name="low_orange">#ffbaab</color>
+    <color name="low_orange">#626363</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#6e1fed</color>
 </resources>

@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         
 
 
@@ -58,6 +58,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_rate -> Toast.makeText(applicationContext, "Rate Button Clicked", Toast.LENGTH_SHORT).show()
                 R.id.nav_share -> Toast.makeText(applicationContext, "Share Button Clicked", Toast.LENGTH_SHORT).show()
                 R.id.nav_privacy -> Toast.makeText(applicationContext, "Privacy Button Clicked", Toast.LENGTH_SHORT).show()
+                //R.id.nav_settings -> Toast.makeText(applicationContext, "Settings Button Clicked", Toast.LENGTH_SHORT).show()
+                R.id.nav_settings -> startActivity(Intent(applicationContext, SettingsActivity::class.java))
             }
             true
         }

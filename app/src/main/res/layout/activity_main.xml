@@ -42,12 +42,12 @@
                 android:id="@+id/practice_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Practice Questions"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textSize="20sp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:text="Practice Questions"
+                android:textColor="@color/main_text_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/practice_line"
@@ -63,7 +63,7 @@
                 android:layout_width="100dp"
                 android:layout_height="120dp"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/practice_side_img"/>
+                android:src="@drawable/practice_side_img" />
 
             <ImageView
                 android:layout_width="50dp"
@@ -77,12 +77,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/practice_line"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="110dp"
                 android:text="Access a complete list of various driving laws and their penalties charged by RTO"
 
-                android:textColor="@color/white"/>
+                android:textColor="@color/main_text_color" />
 
         </RelativeLayout>
 
@@ -104,28 +104,28 @@
                 android:id="@+id/mock_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mock Test"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textSize="20sp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:text="Mock Test"
+                android:textColor="@color/main_text_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/mock_line"
                 android:layout_width="100dp"
                 android:layout_height="4dp"
                 android:layout_below="@id/mock_tv"
-                android:src="@drawable/list_line"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginStart="20dp"/>
+                android:src="@drawable/list_line" />
 
             <ImageView
                 android:id="@+id/side_mock"
                 android:layout_width="100dp"
                 android:layout_height="120dp"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/dl_side_img"/>
+                android:src="@drawable/dl_side_img" />
 
             <ImageView
                 android:layout_width="50dp"
@@ -139,12 +139,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/mock_line"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="110dp"
                 android:text="Access a complete list of various driving laws and their penalties charged by RTO"
-
-                android:textColor="@color/white"/>
+                android:textColor="@color/main_text_color" />
 
         </RelativeLayout>
 
@@ -165,12 +164,12 @@
                 android:id="@+id/dl_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Driving Laws"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textSize="20sp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:text="Driving Laws"
+                android:textColor="@color/main_text_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/dl_line"
@@ -200,12 +199,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/dl_line"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="110dp"
                 android:text="Access a complete list of various driving laws and their penalties charged by RTO"
 
-                android:textColor="@color/white"/>
+                android:textColor="@color/main_text_color" />
 
         </RelativeLayout>
 
@@ -232,7 +231,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:text="License Procedure"
-                android:textColor="@color/white"
+                android:textColor="@color/main_text_color"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -268,7 +267,7 @@
                 android:layout_marginEnd="110dp"
                 android:text="Find the complete process on how to apply for drivers license in India."
 
-                android:textColor="@color/white" />
+                android:textColor="@color/main_text_color" />
 
 
         </RelativeLayout>
@@ -284,17 +283,15 @@
         app:layout_constraintTop_toBottomOf="@id/license_pro_select">
 
 
-
-        <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/adView"
             android:layout_width="wrap_content"
+            android:background="@drawable/ads_request"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             ads:adSize="SMART_BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
-        </com.google.android.gms.ads.AdView>
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"></com.google.android.gms.ads.AdView>
     </RelativeLayout>
 
 
